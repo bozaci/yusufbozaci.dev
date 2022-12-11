@@ -1,0 +1,54 @@
+//
+// Headings
+//
+
+.c-headings {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  height: max-content;
+  margin: auto 0;
+  padding: 15px 5px;
+  border-radius: 8px;
+  background-color: $primary-color;
+  z-index: 50;
+
+  &:hover {
+    padding: 15px;
+  }
+
+  &:hover &__link {
+    display: block;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-top: 5px;
+    }
+  }
+
+  &__circle {
+    min-width: 6px;
+    max-width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background-color: rgb(255, 255, 255, 0.5);
+  }
+
+  &__link {
+    margin-left: 7px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #fff;
+    display: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+//
+// Global
+//
+
+@import 'styles/_mixins.scss';
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/sf-pro-display-regular.otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/sf-pro-display-medium.otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-display: swap;
+  src: url('../assets/fonts/sf-pro-display-semibold.ttf');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/sf-pro-display-bold.otf');
+}
+
+body {
+  font-family: 'SF Pro Display';
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.l-main {
+  flex: 1;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: $container-size + 24px;
+
+    &--small {
+      max-width: $container-size-small + 24px;
+    }
+
+    &--medium {
+      max-width: $container-size-medium + 24px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    &--xsmall {
+      max-width: $container-size-xsmall + 24px;
+    }
+  }
+}
+
+.is-scroll-none {
+  overflow: hidden;
+}

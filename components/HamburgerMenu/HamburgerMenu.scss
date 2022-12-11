@@ -1,0 +1,135 @@
+//
+// Hamburger Menu
+//
+
+.c-hamburger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+  background: linear-gradient(180deg, #fff, rgba(255, 255, 255, 0.95));
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-75px);
+  transition: all 400ms;
+  z-index: 999;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &__inner {
+    min-height: calc(100vh - 1rem);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgb(255, 197, 81, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__close {
+    border: 0;
+    outline: 0;
+    min-width: 28px;
+    max-width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    background-color: #ff1e00;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 125ms;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #eb1b00;
+    }
+
+    &:active {
+      background-color: #da1900;
+    }
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list-item {
+    width: 100%;
+    display: flex;
+  }
+
+  &__list-item:not(:first-child) {
+    margin-top: 5px;
+  }
+
+  &__list-link {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #000;
+    text-align: center;
+    transition: all 125ms;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      background-color: #f3f3f3;
+      transform: scale(0.95);
+      opacity: 0;
+      transition: all 175ms;
+      z-index: -1;
+    }
+  }
+
+  &__list-link:hover::before,
+  &__list-link.is-active::before {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &__footer {
+    padding: 20px 0 1rem 0;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+}

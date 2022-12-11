@@ -1,0 +1,40 @@
+//
+// Coming Soon
+//
+
+@import 'styles/_mixins.scss';
+
+.c-coming-soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    max-width: 225px;
+    padding-right: 30px;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  &__text {
+    max-width: 425px;
+  }
+
+  /**
+   *
+   * Responsive
+   *
+   */
+  @include mobile(){
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    &__img {
+      max-width: 175px;
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}

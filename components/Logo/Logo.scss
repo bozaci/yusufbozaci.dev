@@ -1,0 +1,15 @@
+//
+// Logo
+//
+
+.c-logo {
+  display: block;
+
+  &__link {
+    transition: all 125ms;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}

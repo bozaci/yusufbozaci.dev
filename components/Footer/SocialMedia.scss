@@ -1,0 +1,40 @@
+//
+// Social Media
+//
+
+.c-social-media {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    min-width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #000;
+    transition: all 125ms;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+
+    &:not(:first-child) {
+      margin-left: 7px;
+    }
+
+    &--filled {
+      min-width: auto;
+      padding: 7px 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17px;
+    }
+  }
+}
