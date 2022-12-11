@@ -48,7 +48,7 @@ const Footer: NextPage<IFooterProps> = ({ hide }) => {
           <a
             href={`mailto:${email}`}
             rel="noreferrer"
-            aria-label=""
+            aria-label="Email"
             className="c-social-media__item c-social-media__item--filled"
           >
             <span className="c-social-media__text">Email</span>
@@ -58,7 +58,7 @@ const Footer: NextPage<IFooterProps> = ({ hide }) => {
             href={`https://twitter.com/${twitter}`}
             target="_blank"
             rel="noreferrer"
-            aria-label=""
+            aria-label="Twitter"
             className="c-social-media__item"
           >
             <i className="ri-twitter-fill"></i>
@@ -68,7 +68,7 @@ const Footer: NextPage<IFooterProps> = ({ hide }) => {
             href={`https://github.com/${github}`}
             target="_blank"
             rel="noreferrer"
-            aria-label=""
+            aria-label="Github"
             className="c-social-media__item"
           >
             <i className="ri-github-fill"></i>
