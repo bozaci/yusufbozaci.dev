@@ -36,6 +36,7 @@
     border-radius: 10px;
     background-color: #f1f1f1;
     font-size: 18px;
+    color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +65,7 @@
     }
   }
 
-  @include tablet(){
+  @include tablet() {
     top: 2rem;
   }
 }
