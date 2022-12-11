@@ -5,7 +5,7 @@
 This project was built using these technologies and tools.
 
 - **Framework**: [Next.js](https://nextjs.org) & [Typescript](https://www.typescriptlang.org)
-- **Styling**: [SASS (SCSS)](https://sass-lang.com)
+- **Styling**: [SASS (SCSS)](https://sass-lang.com), [Bootstrap Grid](https://getbootstrap.com)
 - **CSS Metodology**: [BEM](https://getbem.com/introduction), [Clean Namespaces](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces)
 - **Formatter**: [Prettier](https://prettier.io)
 - **Code Editor**: [VS Code](https://code.visualstudio.com)
