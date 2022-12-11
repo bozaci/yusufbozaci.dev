@@ -10,7 +10,7 @@ const config: IConfig = {
     'https://api.whatsapp.com/send?phone=902269110467&text=Merhaba, bir proje ile ilgili iletişime geçiyorum.',
   email: 'yusuf@updatedev.net',
   twitter: 'yusufbozaci_',
-  github: 'bozaci/yusufbozaci.dev',
+  github: 'bozaci',
 };
 
 export default config;
