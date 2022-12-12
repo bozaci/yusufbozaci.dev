@@ -3,13 +3,13 @@ import config from 'data/config';
 
 import Logo from '../Logo';
 import Image from '../Image';
+import SocialMedia from '../SocialMedia';
 
 import nextLogo from 'assets/images/logo/next.svg';
 import vercelLogo from 'assets/images/logo/vercel.svg';
 import heart from 'assets/images/heart.svg';
 
 import './Footer.scss';
-import './SocialMedia.scss';
 
 interface IFooterProps {
   hide?: boolean;
@@ -17,6 +17,26 @@ interface IFooterProps {
 
 const Footer: NextPage<IFooterProps> = ({ hide }) => {
   const { email, twitter, github } = config;
+
+  const socialMediaData = [
+    {
+      name: 'Email',
+      href: `mailto:${email}`,
+      filled: true,
+    },
+    {
+      name: 'Twitter',
+      icon: 'ri-twitter-fill',
+      href: `https://twitter.com/${twitter}`,
+      targetBlank: true,
+    },
+    {
+      name: 'Github',
+      icon: 'ri-github-fill',
+      href: `https://github.com/${github}`,
+      targetBlank: true,
+    },
+  ];
 
   if (hide) {
     return null;
@@ -44,36 +64,7 @@ const Footer: NextPage<IFooterProps> = ({ hide }) => {
           </div>
         </div>
 
-        <div className="c-social-media">
-          <a
-            href={`mailto:${email}`}
-            rel="noreferrer"
-            aria-label="Email"
-            className="c-social-media__item c-social-media__item--filled"
-          >
-            <span className="c-social-media__text">Email</span>
-          </a>
-
-          <a
-            href={`https://twitter.com/${twitter}`}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Twitter"
-            className="c-social-media__item"
-          >
-            <i className="ri-twitter-fill"></i>
-          </a>
-
-          <a
-            href={`https://github.com/${github}`}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Github"
-            className="c-social-media__item"
-          >
-            <i className="ri-github-fill"></i>
-          </a>
-        </div>
+        <SocialMedia data={socialMediaData} />
       </div>
     </footer>
   );
