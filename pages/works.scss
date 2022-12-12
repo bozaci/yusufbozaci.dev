@@ -1,0 +1,13 @@
+//
+// Works
+//
+
+.o-works {
+  &__load-more-container {
+    margin-top: $section-medium-space;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
