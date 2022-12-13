@@ -31,7 +31,7 @@ const Works = () => {
     if (maxShowData > totalData) {
       setIsDataComplete(true);
     }
-  }, [maxShowData]);
+  }, [maxShowData, totalData]);
 
   return (
     <>
