@@ -1,0 +1,44 @@
+//
+// Logo
+//
+
+@import '../../../styles/functions';
+
+.logo {
+  width: max-content;
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    > *:not(:first-child) {
+      margin-left: 7px;
+    }
+  }
+
+  &__link:hover &__dot {
+    color: get-color('light-gray');
+  }
+
+  &__img {
+    min-width: px-to-rem(48px);
+    max-width: px-to-rem(48px);
+    height: px-to-rem(48px);
+    border: 2px solid get-color('white');
+    border-radius: get-border-radius(lg);
+    box-shadow: 0 2px 5px #0000000d;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &__text {
+    font-size: px-to-rem(16px);
+    font-weight: 500;
+    line-height: px-to-rem(18px);
+    color: get-color('black');
+  }
+
+  &__dot {
+    transition: color, $transition-delay-time;
+  }
+}

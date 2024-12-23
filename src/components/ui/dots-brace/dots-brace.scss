@@ -1,0 +1,35 @@
+//
+// Dots Brace
+//
+
+@import '../../../styles/functions';
+
+.dots-brace {
+  margin: px-to-rem(30px) 0;
+  display: flex;
+  align-items: center;
+
+  &--align-left {
+    justify-content: flex-start;
+  }
+
+  &--align-center {
+    justify-content: center;
+  }
+
+  &--align-right {
+    justify-content: flex-end;
+  }
+
+  > * {
+    min-width: px-to-rem(5px);
+    max-width: px-to-rem(5px);
+    height: px-to-rem(5px);
+    border-radius: 1px;
+    background-color: get-color('light-gray');
+
+    &:not(:first-child) {
+      margin-left: px-to-rem(10px);
+    }
+  }
+}

@@ -1,0 +1,9 @@
+//
+// Spacing
+//
+
+@each $size, $value in $spacing-sizes {
+  .spacing-#{$size} > *:not(:last-child, .is-excluded-for-spacing) {
+    margin-bottom: $value;
+  }
+}

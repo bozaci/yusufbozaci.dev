@@ -1,0 +1,134 @@
+[
+  {
+    "slug": "awesome-semantic-commit",
+    "title": "Awesome Semantic Commit",
+    "excerpt": "Master best practices for writing clear and concise commit messages to improve project organisation, increase code readability, facilitate team collaboration and optimise version control. Strengthen your workflow with effective communication on every commit.",
+    "projectInfo": {
+      "status": "active",
+      "type": "Free, Open Source"
+    },
+    "banner": {
+      "image": "/project-banner/awesome-semantic-commit.jpg",
+      "website": "https://semanticcommit.com",
+      "borderColor": "#D0E0FF",
+      "backgroundColor": "#6E9EFF",
+      "theme": "white"
+    },
+    "myResponsibility": [
+      "To establish and develop the front-end architecture in a sustainable way.",
+      "To make back-end development using the server side with Next.js."
+    ],
+    "technologiesTools": [
+      ["Next.js", "TypeScript"],
+      ["SASS (SCSS)", "Bootstrap Grid"],
+      ["Sentry", "Posthog"],
+      ["BEM", "ESLint", "Stylelint", "Prettier"]
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "link": "https://github.com/bozaci/awesome-semantic-commit"
+      },
+      {
+        "name": "Website",
+        "link": "https://semanticcommit.com"
+      },
+      {
+        "name": "AI-Powered Commit Generator",
+        "link": "https://semanticcommit.com/commit-generator"
+      },
+      {
+        "name": "Semantic Commit Validator",
+        "link": "https://semanticcommit.com/semantic-commit-validator"
+      }
+    ]
+  },
+  {
+    "slug": "wordgam",
+    "title": "WordGam",
+    "excerpt": "WordGam is a WordPress blog theme project aimed at improving user navigation and increasing visitor rates on websites.",
+    "projectInfo": {
+      "status": "active",
+      "type": "Paid"
+    },
+    "banner": {
+      "image": "/project-banner/wordgam.png",
+      "website": "https://wordgam.com",
+      "borderColor": "#baabe7",
+      "backgroundColor": "#7F5AF2",
+      "theme": "white"
+    },
+    "myResponsibility": [
+      "To design and implement user-friendly interfaces to enhance website usability and visitor engagement.",
+      "To ensure the WordPress theme is fully responsive across devices, providing an optimal user experience.",
+      "To develop and integrate functionalities into WordPress using technologies such as HTML, CSS (SASS), JavaScript (Native and jQuery), PHP, and WordPress Hooks."
+    ],
+    "technologiesTools": [
+      ["HTML", "JavaScript"],
+      ["SASS (SCSS)", "Bootstrap Grid"],
+      ["PHP", "WordPress Hooks"]
+    ],
+    "links": [
+      {
+        "name": "Website",
+        "link": "https://wordgam.com"
+      }
+    ]
+  },
+  {
+    "slug": "gamedium",
+    "title": "Gamedium",
+    "excerpt": "Gamedium is a platform that brings gamers together in one place and makes it easier to find gaming partners.",
+    "projectInfo": {
+      "status": "deactive",
+      "type": "Free"
+    },
+    "myResponsibility": [
+      "To develop a functional and user-friendly platform that allows users to find gaming partners with ease.",
+      "To implement dynamic front-end features using technologies such as Vue.js, Vuex, and CSS.",
+      "To design and integrate a back-end architecture using the Slim Framework for REST API (PHP) and real-time communication with Socket.io.",
+      "To address the challenges faced by gamers in finding partners, providing an efficient and valuable solution.",
+      "To enhance and expand front-end development skills through practical implementation and real-world use cases."
+    ],
+    "technologiesTools": [
+      ["Vue.js", "Vuex"],
+      ["CSS"],
+      ["Slim Framework for REST API (PHP)", "Socket.io"]
+    ],
+    "links": [
+      {
+        "name": "Website (Web Archive)",
+        "link": "https://web.archive.org/web/20210518233736/https://gamedium.com/"
+      }
+    ]
+  },
+  {
+    "slug": "mailsending",
+    "title": "MailSending",
+    "excerpt": "MailSending is a project that provides a service for sending bulk emails.",
+    "projectInfo": {
+      "status": "deactive",
+      "type": "Free"
+    },
+    "banner": {
+      "image": "/project-banner/mailsending.png",
+      "website": "https://web.archive.org/web/20210126165141/https://mailsending.org/",
+      "borderColor": "#ffe6b0",
+      "backgroundColor": "#FFAE00",
+      "theme": "black"
+    },
+    "myResponsibility": [
+      "To develop a service that addresses users' bulk email needs, ensuring efficiency and ease of use.",
+      "To implement core functionalities using technologies such as HTML, CSS, JavaScript, and PHP.",
+      "To streamline the process for users to send bulk emails effectively.",
+      "To enhance and refine front-end development skills through practical application and problem-solving in the project."
+    ],
+    "technologiesTools": [["HTML", "JavaScript (Native)"], ["CSS"], ["PHP"]],
+    "links": [
+      {
+        "name": "Website (Web Archive)",
+        "link": "https://web.archive.org/web/20210126165141/https://mailsending.org/"
+      }
+    ]
+  }
+]

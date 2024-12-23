@@ -1,0 +1,91 @@
+//
+// Project Banner
+//
+
+@import '../../../styles/functions';
+
+.project-banner {
+  height: px-to-rem(225px);
+  padding-top: px-to-rem(25px);
+  padding-left: px-to-rem(25px);
+  padding-right: px-to-rem(25px);
+  border-radius: get-border-radius(lg);
+  background-color: var(--project-banner-background-color, get-color('primary'));
+  overflow: hidden;
+
+  &--theme-black &__visit-button {
+    background-color: #0000001a;
+    color: get-color('black');
+  }
+
+  &--theme-black &__visit-button-icon {
+    color: get-color('black');
+  }
+
+  &__image-container {
+    position: relative;
+    height: 100%;
+    border-radius: get-border-radius(lg) get-border-radius(lg) 0 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--project-banner-border-color, #fff5d1);
+    border-bottom: 0;
+    display: block;
+    overflow: hidden;
+  }
+
+  &__image-container:hover &__hover-container {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__image-container:hover &__visit-button {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  &__img {
+    width: 100%;
+    background-color: get-color('light-gray');
+    box-shadow: 0 0 30px #00000040;
+  }
+
+  &__hover-container {
+    position: absolute;
+    inset: 0;
+    height: calc(225px - 25px);
+    border-radius: 5px 5px 0 0;
+    background-color: #0000000d;
+    backdrop-filter: blur(25px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition-delay-time;
+    z-index: 15;
+  }
+
+  &__visit-button {
+    padding: px-to-rem(7px) px-to-rem(10px);
+    border-radius: 999px;
+    background-color: #ffffff40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: px-to-rem(16px);
+    font-weight: 400;
+    color: #fff;
+    opacity: 0;
+    transform: scale(0.75);
+    visibility: hidden;
+    transition: opacity, transform, $transition-delay-time;
+
+    &-icon {
+      display: flex;
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+}

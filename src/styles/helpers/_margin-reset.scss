@@ -1,0 +1,17 @@
+//
+// Reset Margin
+//
+
+$prefixes: (
+  m: 'margin',
+  mt: 'margin-top',
+  mb: 'margin-bottom',
+  ml: 'margin-left',
+  mr: 'margin-right',
+);
+
+@each $prefix, $value in $prefixes {
+  .#{$prefix}-reset {
+    #{$value}: 0;
+  }
+}

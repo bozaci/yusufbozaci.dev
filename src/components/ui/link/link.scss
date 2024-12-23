@@ -1,0 +1,33 @@
+//
+// Link
+//
+
+@import '../../../styles/functions';
+
+.link {
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  font-size: px-to-rem(16px);
+  font-weight: 500;
+  line-height: px-to-rem(24px);
+  color: get-color('dark-gray');
+  transition: color, $transition-delay-time;
+
+  &:hover,
+  &:hover &__icon {
+    color: get-color('link-hover');
+  }
+
+  &:hover &__icon {
+    transform: translate(1px, -1px);
+  }
+
+  &__icon {
+    display: flex;
+    margin-left: px-to-rem(2px);
+    font-size: px-to-rem(16px);
+    color: get-color('dark-gray');
+    transition: color, transform, $transition-delay-time;
+  }
+}

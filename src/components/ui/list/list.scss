@@ -1,0 +1,42 @@
+//
+// List
+//
+
+@import '../../../styles/functions';
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  &--type-square &__item::before {
+    border-radius: 1.5px;
+  }
+
+  &--type-circle &__item::before {
+    border-radius: 999px;
+  }
+
+  &__item {
+    font-size: px-to-rem(16px);
+    font-weight: 400;
+    line-height: px-to-rem(24px);
+    color: get-color('dark-gray');
+    display: flex;
+    align-items: flex-start;
+
+    &::before {
+      content: '';
+      min-width: px-to-rem(6px);
+      max-width: px-to-rem(6px);
+      height: px-to-rem(6px);
+      margin-top: px-to-rem(8px);
+      margin-right: px-to-rem(7px);
+      background-color: #b5b5b5;
+      display: flex;
+    }
+
+    &:not(:first-child) {
+      margin-top: px-to-rem(4px);
+    }
+  }
+}

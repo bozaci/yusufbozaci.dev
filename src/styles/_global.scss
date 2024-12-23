@@ -1,0 +1,47 @@
+//
+// Global
+//
+
+@import './functions';
+
+@font-face {
+  font-family: 'Inter Display';
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/inter-display-regular.ttf');
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/inter-display-medium.ttf');
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  font-weight: 600;
+  font-display: swap;
+  src: url('../assets/fonts/inter-display-semibold.ttf');
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/inter-display-bold.ttf');
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-family: $font-family;
+}
+
+.main {
+  flex: 1;
+}
+
+@include make-container;

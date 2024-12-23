@@ -1,0 +1,31 @@
+//
+// Button
+//
+
+@import '../../../styles/functions';
+
+.button {
+  border: 0;
+  outline: 0;
+  padding: px-to-rem(8px) px-to-rem(10px);
+  border-radius: get-border-radius('md');
+  background-color: get-color('black');
+  font-family: $font-family;
+  font-size: px-to-rem(16px);
+  font-weight: 500;
+  color: get-color('white');
+  transition: background-color, $transition-delay-time;
+
+  &:hover {
+    cursor: pointer;
+    background-color: get-color('black-hover');
+  }
+
+  &--theme-primary {
+    background-color: get-color('primary');
+
+    &:hover {
+      background-color: get-color('primary-hover');
+    }
+  }
+}

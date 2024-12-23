@@ -1,0 +1,97 @@
+//
+// Functions
+// stylelint-disable
+//
+
+@use 'sass:map';
+@use 'sass:math';
+@import './variables';
+
+@function get-color($color) {
+  @if map-has-key($colors, $color) {
+    @return map-get($colors, $color);
+  } @else {
+    @warn "Color: #{$color} is not defined. Please use a valid color key.";
+  }
+}
+
+@function get-border-radius($size) {
+  @if map-has-key($border-radius-sizes, $size) {
+    @return map-get($border-radius-sizes, $size);
+  } @else {
+    @warn "Border Radius: #{$size} is not defined. Please use a valid color key.";
+  }
+}
+
+@mixin breakpoint-up($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint: #{$breakpoint} is not defined. Please use a valid breakpoint key.";
+  }
+}
+
+@mixin breakpoint-down($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (max-width: map-get($grid-breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint: #{$breakpoint} is not defined. Please use a valid breakpoint key.";
+  }
+}
+
+@mixin make-container {
+  @each $container, $value in $container-max-widths {
+    @include breakpoint-up($container) {
+      .container {
+        max-width: $value;
+      }
+    }
+  }
+}
+
+// source: https://github.com/atolye15/checklist/blob/master/src/styles/abstracts/_functions.scss
+// starting line: 15
+// ending line: 62
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+@function px-to-rem($value, $base-value: $base-font-size-value) {
+  @if $base-value == null {
+    $base-value: 16px;
+  }
+
+  @if type-of($value) != 'number' {
+    @warn 'value: #{$value} is not a number';
+    @return null;
+  }
+
+  @if type-of($base-value) != 'number' {
+    @warn 'base-value: #{$base-value} is not a number';
+    @return null;
+  }
+
+  @if unit($base-value) == '%' {
+    $base-value: math.div($base-value, 100%) * 16px;
+  }
+
+  @if unit($base-value) == 'rem' or unit($base-value) == 'em' {
+    $base-value: strip-unit($base-value) * 16px;
+  }
+
+  $value: math.div(strip-unit($value), strip-unit($base-value)) * 1rem;
+
+  @if (strip-unit($value) == 0) {
+    $value: 0;
+  }
+
+  @return $value;
+}

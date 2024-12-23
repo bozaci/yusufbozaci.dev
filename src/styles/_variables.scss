@@ -1,0 +1,70 @@
+//
+// Variables
+//
+
+$container-max-widths: (
+  sm: 540px,
+  md: 625px,
+  lg: 625px,
+  xl: 625px,
+  xxl: 625px,
+);
+$border-radius-sizes: (
+  sm: 4px,
+  md: 6px,
+  lg: 8px,
+);
+$spacing-sizes: (
+  sm: 10px,
+  md: 20px,
+  lg: 30px,
+  xl: 40px,
+  xxl: 50px,
+);
+$font-family: 'Inter Display', sans-serif;
+$base-font-size-value: 16px;
+$transition-delay-time: 0.15s;
+
+/**
+ *
+ * Colors
+ *
+ */
+$colors: (
+  'primary': #ffeca6,
+  'primary-hover': #e2b100,
+  'link-hover': #000,
+
+  'white': #fff,
+  'black': #000,
+  'black-hover': #202020,
+  'dark-gray': #5c5c5c,
+  'light-gray': #ececec,
+  'green': #23c855,
+  'red': #d11c1c,
+);
+
+/**
+ *
+ * Font & Text
+ *
+ */
+$font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+);
+
+/**
+ *
+ * Grid
+ *
+ */
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);

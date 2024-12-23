@@ -1,4 +1,4 @@
-[![My Personal Website](/banner.png)](https://yusufbozaci.dev)
+[![My Personal Website](/docs/images/banner.svg)](https://yusufbozaci.dev)
 
 # [**yusufbozaci.dev**](https://yusufbozaci.dev)
 
@@ -6,24 +6,49 @@ This project was built using these technologies and tools.
 
 - **Framework**: [Next.js](https://nextjs.org) & [Typescript](https://www.typescriptlang.org)
 - **Styling**: [SASS (SCSS)](https://sass-lang.com), [Bootstrap Grid](https://getbootstrap.com)
-- **CSS Metodology**: [BEM](https://getbem.com/introduction), [Clean Namespaces](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces)
+- **CSS Metodology**: [BEM](https://getbem.com/introduction)
 - **Formatter**: [Prettier](https://prettier.io)
 - **Code Editor**: [VS Code](https://code.visualstudio.com)
 - **Deployment**: [Vercel](https://vercel.com)
-- **Other Tools**: [Eslint](https://eslint.org)
+- **Other Tools**: [ESLint](https://eslint.org), [Stylelint](https://stylelint.io/)
 
-# Running Project
+## Requirements
 
-This application requires Node.js v18.11+.
+In order to run the project, the following tools must be installed on your system:
 
-```bash
-git clone https://github.com/bozaci/yusufbozaci.dev.git
-cd yusufbozaci.dev
-npm install
-npm run dev
-```
+- **Node.js** (v16.x and above)
+- **npm** or **yarn** package manager
+
+## Installation and Operation
+
+You can run the project in local environment by following the steps below:
+
+1. **Clone the project repository:**
+
+   ```bash
+   git clone https://github.com/bozaci/yusufbozaci.dev.git
+   cd yusufbozaci.dev
+   ```
+
+2. **Install the requirements:**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the application:**
+
+   ```bash
+   npm run dev
+   # or
+   yarn giant
+   ```
+
+4. **Access from browser:**
+   You can view the application at [http://localhost:3000](http://localhost:3000).
 
 # License
 
 See the [LICENSE](/LICENSE) file for details. (fear not, no complicated license)
-

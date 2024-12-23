@@ -1,0 +1,9 @@
+//
+// Border Radius
+//
+
+@each $size, $value in $border-radius-sizes {
+  .br-#{$size} {
+    border-radius: $value;
+  }
+}

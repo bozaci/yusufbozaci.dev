@@ -1,0 +1,24 @@
+//
+// Utilities
+//
+
+@import './functions';
+
+@each $color, $value in $colors {
+  .text-#{$color} {
+    color: $value;
+  }
+}
+
+@each $weight, $value in $font-weights {
+  .text-#{$weight} {
+    font-weight: $value;
+  }
+}
+
+.section-title {
+  font-size: px-to-rem(20px);
+  font-weight: 500;
+  line-height: px-to-rem(24px);
+  color: get-color('black');
+}

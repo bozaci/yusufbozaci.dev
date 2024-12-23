@@ -1,0 +1,16 @@
+{
+  "socialMedia": {
+    "github": "https://github.com/bozaci",
+    "twitter": "https://twitter.com/yusufbozaci_",
+    "linkedin": "https://linkedin.com/in/yusufbozaci",
+    "email": "mailto:hi@yusufbozaci.dev"
+  },
+  "meta": {
+    "general": {
+      "prefix": "Yusuf Bozacı",
+      "brace": "/",
+      "title": "Yusuf Bozacı",
+      "description": "Yusuf Bozacı is a front-end developer creating user-friendly, responsive, and sustainable designs with a focus on UX."
+    }
+  }
+}

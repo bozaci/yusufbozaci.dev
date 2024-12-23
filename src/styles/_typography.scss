@@ -1,0 +1,109 @@
+//
+// Typhography
+// stylelint-disable scss/at-extend-no-missing-placeholder, at-rule-disallowed-list
+//
+
+//
+// Variables
+// ---------
+//
+
+/* General */
+$font-bolder-weight: 600;
+
+/* Body */
+$body-font-size: px-to-rem(16px);
+$body-font-weight: 400;
+$body-line-height: 1.25;
+$body-text-color: get-color('dark-gray');
+
+/* Paragraph */
+$paragraph-margin-bottom: px-to-rem(15px);
+$paragraph-font-size: px-to-rem(16px);
+$paragraph-font-weight: 400;
+$paragraph-line-height: 1.5;
+$paragraph-text-color: get-color('dark-gray');
+
+/* List */
+$list-margin-bottom: px-to-rem(15px);
+
+/* Headings */
+$headings-margin-bottom: px-to-rem(10px);
+$headings-font-weight: 500;
+$headings-line-height: 1.25;
+$headings-text-color: get-color('black');
+
+/* Headings Font Size */
+$h1-font-size: px-to-rem(24px);
+$h2-font-size: px-to-rem(22px);
+$h3-font-size: px-to-rem(20px);
+$h4-font-size: px-to-rem(18px);
+$h5-font-size: px-to-rem(16px);
+
+//
+// Configure
+// ---------
+//
+
+body {
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
+  color: $body-text-color;
+}
+
+p {
+  margin-bottom: $paragraph-margin-bottom;
+  font-size: $paragraph-font-size;
+  font-weight: $paragraph-font-weight;
+  line-height: $paragraph-line-height;
+  color: $paragraph-text-color;
+}
+
+.heading {
+  margin-top: 0;
+  margin-bottom: $headings-margin-bottom;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-text-color;
+}
+
+h1 {
+  @extend .heading;
+
+  font-size: $h1-font-size;
+}
+
+h2 {
+  @extend .heading;
+
+  font-size: $h2-font-size;
+}
+
+h3 {
+  @extend .heading;
+
+  font-size: $h3-font-size;
+}
+
+h4 {
+  @extend .heading;
+
+  font-size: $h4-font-size;
+}
+
+h5 {
+  @extend .heading;
+
+  font-size: $h5-font-size;
+}
+
+b,
+strong {
+  font-weight: $font-bolder-weight;
+}
+
+ul,
+ol {
+  margin-bottom: $list-margin-bottom;
+}

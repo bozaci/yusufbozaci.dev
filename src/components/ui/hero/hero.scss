@@ -1,0 +1,43 @@
+//
+// Hero
+//
+
+@import '../../../styles/functions';
+
+.hero {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-bottom: px-to-rem(5px);
+    font-size: px-to-rem(24px);
+    line-height: px-to-rem(28px);
+  }
+
+  &__text {
+    margin-bottom: 0;
+    font-size: px-to-rem(16px);
+    line-height: px-to-rem(24px);
+    color: get-color('dark-gray');
+
+    &--with-spacing:not(:first-child) {
+      margin-top: px-to-rem(10px);
+    }
+  }
+
+  &__hr-line {
+    width: 100%;
+    height: 1px;
+    margin: var(--hero-hr-line-spacing-size, px-to-rem(30px)) 0;
+    background-color: get-color('light-gray');
+    display: block;
+
+    &--spacing-size-small {
+      --hero-hr-line-spacing-size: 30px;
+    }
+
+    &--spacing-size-medium {
+      --hero-hr-line-spacing-size: 50px;
+    }
+  }
+}
