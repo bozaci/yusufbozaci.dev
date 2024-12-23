@@ -5,6 +5,7 @@ import List from '@/components/ui/list';
 import LinkComp from '@/components/ui/link';
 import DotsBrace from '@/components/ui/dots-brace';
 import Blockquote from '@/components/ui/blockquote';
+import Badge from '@/components/ui/badge';
 
 const CustomMDX: FC<MDXRemoteProps> = (props) => {
   const components = {
@@ -54,6 +55,9 @@ const CustomMDX: FC<MDXRemoteProps> = (props) => {
     },
     blockquote: (props: any) => {
       return <Blockquote {...props} />;
+    },
+    code: (props: any) => {
+      return <Badge {...props} theme="light-gray" />;
     },
     hr: (props: any) => {
       return <DotsBrace {...props} align="center" className="is-excluded-for-spacing" />;
