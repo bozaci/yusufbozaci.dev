@@ -1,0 +1,22 @@
+//
+// Badge
+//
+
+@import '../../../styles/functions';
+
+.badge {
+  padding: px-to-rem(2px) px-to-rem(7px);
+  border-radius: get-border-radius(md);
+  background-color: #000;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: px-to-rem(14px);
+  font-weight: 500;
+  color: get-color('white');
+
+  &--theme-light-gray {
+    background-color: get-color('light-gray');
+    color: get-color('dark-gray');
+  }
+}
