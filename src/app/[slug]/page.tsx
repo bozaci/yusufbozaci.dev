@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import { getContents } from '@/utils/mdx';
 import Config from '@/config.json';
 
