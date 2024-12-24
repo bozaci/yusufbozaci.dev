@@ -50,6 +50,16 @@ const CustomMDX: FC<MDXRemoteProps> = (props) => {
         </List.Item>
       );
     },
+    img: (props: any) => {
+      return (
+        <img
+          {...props}
+          loading="lazy"
+          style={{ width: '100%', maxHeight: 300, objectFit: 'cover' }}
+          className="br-lg"
+        />
+      );
+    },
     strong: (props: any) => {
       return <strong {...props} className="text-medium" />;
     },
