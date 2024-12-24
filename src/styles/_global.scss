@@ -44,4 +44,15 @@ body {
   flex: 1;
 }
 
+details {
+  summary {
+    transition: color, $transition-delay-time;
+
+    &:hover {
+      cursor: pointer;
+      color: get-color('black');
+    }
+  }
+}
+
 @include make-container;
