@@ -36,6 +36,7 @@ const ProjectBanner: FC<ProjectBannerProps> = ({ data, className }) => {
           alt="Project Banner"
           width={551}
           height={313}
+          fetchPriority="high"
           className="project-banner__img"
         />
 

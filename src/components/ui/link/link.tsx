@@ -26,7 +26,13 @@ const LinkComp: FC<LinkProps> = ({ href, children }) => {
     );
   } else {
     return (
-      <a href={href} target="_blank" className="link" aria-label={children?.toString()}>
+      <a
+        href={href}
+        target="_blank"
+        className="link"
+        rel="noopener noreferrer"
+        aria-label={children?.toString()}
+      >
         {children}
 
         <span className="link__icon">

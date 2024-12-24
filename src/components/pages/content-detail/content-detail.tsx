@@ -26,6 +26,7 @@ const ContentDetail = async ({ params }: { params: Promise<{ slug: string }> }) 
               alt={content.metadata.title}
               width={625}
               height={150}
+              fetchPriority="high"
               className="br-lg d-block"
             />
           </div>
