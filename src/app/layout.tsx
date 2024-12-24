@@ -17,12 +17,24 @@ export const metadata: Metadata = {
     title: Config.meta.general.title,
     description: Config.meta.general.description,
     siteName: Config.meta.general.prefix,
+    images: [
+      {
+        url: `${process.env.APP_BASE_URL}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: Config.meta.general.description,
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
+    card: 'summary_large_image',
+    site: '@yusufbzci',
+    creator: '@yusufbzci',
     title: Config.meta.general.title,
     description: Config.meta.general.description,
+    images: [`${process.env.APP_BASE_URL}/og-image.jpg`],
   },
 };
 
