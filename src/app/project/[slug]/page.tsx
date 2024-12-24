@@ -7,24 +7,32 @@ export const generateMetadata = async ({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const project = getProjects.find((p) => p.slug === slug);
 
-  if (!project)
-    return {
-      title: Config.meta.general.prefix,
-    };
+  if (!project) return null;
 
-  const metaTitle = `${project?.title} ${Config.meta.general.brace} ${Config.meta.general.prefix}`;
-  const metaDescription = project?.excerpt;
+  const metaDataTitle = `${project?.title} ${Config.meta.general.brace} ${Config.meta.general.prefix}`;
+  const metaDataDescription = project?.excerpt;
 
   return {
-    title: metaTitle,
-    description: metaDescription,
+    title: metaDataTitle,
+    description: metaDataDescription,
     openGraph: {
-      title: metaTitle,
-      description: metaDescription,
+      title: metaDataTitle,
+      description: metaDataDescription,
+      images: [
+        {
+          url: `${process.env.APP_BASE_URL}/project/${slug}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: Config.meta.general.description,
+        },
+      ],
     },
     twitter: {
-      title: metaTitle,
-      description: metaDescription,
+      site: '@yusufbzci',
+      creator: '@yusufbzci',
+      title: metaDataTitle,
+      description: metaDataDescription,
+      images: [`${process.env.APP_BASE_URL}/project/${slug}/og-image.png`],
     },
   };
 };
