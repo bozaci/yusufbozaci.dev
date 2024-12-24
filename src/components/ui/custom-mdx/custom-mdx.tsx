@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc';
+import Image from 'next/image';
 
 import List from '@/components/ui/list';
 import LinkComp from '@/components/ui/link';
@@ -52,8 +53,9 @@ const CustomMDX: FC<MDXRemoteProps> = (props) => {
     },
     img: (props: any) => {
       return (
-        <img
+        <Image
           {...props}
+          alt={props.alt || 'Content Inner Image'}
           loading="lazy"
           style={{ width: '100%', maxHeight: 300, objectFit: 'cover' }}
           className="br-lg"
