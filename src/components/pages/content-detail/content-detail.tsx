@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getContents } from '@/utils/mdx';
+import { getImage } from '@/utils/get-image';
 import Image from 'next/image';
 
 import Hero from '@/components/ui/hero';
@@ -10,6 +11,8 @@ const ContentDetail = async ({ params }: { params: Promise<{ slug: string }> }) 
   const content = getContents().find((c) => c.slug === slug);
 
   if (!content) notFound();
+
+  const bannerImage = (await getImage(content.metadata.banner)) || content.metadata.banner;
 
   return (
     <>
@@ -22,10 +25,11 @@ const ContentDetail = async ({ params }: { params: Promise<{ slug: string }> }) 
 
           <div className="hero__group-item">
             <Image
-              src={content.metadata.banner || ''}
+              src={bannerImage}
               alt={content.metadata.title}
               width={625}
-              height={150}
+              height={120}
+              style={{ maxHeight: 120, objectFit: 'cover' }}
               fetchPriority="high"
               className="br-lg d-block"
             />
