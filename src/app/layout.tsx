@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: Config.meta.general.prefix,
     images: [
       {
-        url: `${process.env.APP_BASE_URL}/og-image.jpg`,
+        url: `${process.env.APP_BASE_URL}/og-image.png`,
         width: 1200,
         height: 630,
         alt: Config.meta.general.description,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     creator: '@yusufbzci',
     title: Config.meta.general.title,
     description: Config.meta.general.description,
-    images: [`${process.env.APP_BASE_URL}/og-image.jpg`],
+    images: [`${process.env.APP_BASE_URL}/og-image.png`],
   },
 };
 
