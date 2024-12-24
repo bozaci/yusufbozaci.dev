@@ -59,6 +59,7 @@ const CustomMDX: FC<MDXRemoteProps> = (props) => {
           loading="lazy"
           style={{ width: '100%', maxHeight: 300, objectFit: 'cover' }}
           className="br-lg"
+          unoptimized={props.src.includes('.gif')}
         />
       );
     },
