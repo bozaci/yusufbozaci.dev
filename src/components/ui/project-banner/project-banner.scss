@@ -5,12 +5,16 @@
 @import '../../../styles/functions';
 
 .project-banner {
-  height: px-to-rem(225px);
+  min-height: px-to-rem(225px);
+  max-height: px-to-rem(225px);
   padding-top: px-to-rem(25px);
   padding-left: px-to-rem(25px);
   padding-right: px-to-rem(25px);
   border-radius: get-border-radius(lg);
   background-color: var(--project-banner-background-color, get-color('primary'));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   overflow: hidden;
 
   &--theme-black &__visit-button {
@@ -30,6 +34,7 @@
     border-style: solid;
     border-color: var(--project-banner-border-color, #fff5d1);
     border-bottom: 0;
+    box-shadow: 0 0 30px #00000040;
     display: block;
     overflow: hidden;
   }
@@ -48,13 +53,12 @@
   &__img {
     width: 100%;
     background-color: get-color('light-gray');
-    box-shadow: 0 0 30px #00000040;
   }
 
   &__hover-container {
     position: absolute;
     inset: 0;
-    height: calc(225px - 25px);
+    height: 100%;
     border-radius: 5px 5px 0 0;
     background-color: #0000000d;
     backdrop-filter: blur(25px);
@@ -86,6 +90,20 @@
       display: flex;
       font-size: 18px;
       color: #fff;
+    }
+  }
+
+  /** 
+   *
+   * Responsive
+   *
+   */
+  @include breakpoint-down(md) {
+    min-height: initial;
+    max-height: initial;
+
+    &__image-container {
+      max-height: px-to-rem(150px);
     }
   }
 }

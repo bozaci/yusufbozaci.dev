@@ -7,4 +7,14 @@
 .header {
   padding-top: px-to-rem(40px);
   padding-bottom: px-to-rem(25px);
+
+  /**
+   *
+   * Responsive
+   *
+   */
+  @include breakpoint-down(lg) {
+    padding-top: px-to-rem(20px);
+    padding-bottom: px-to-rem(20px);
+  }
 }

@@ -39,4 +39,18 @@
       }
     }
   }
+
+  /**
+   *
+   * Responsive
+   *
+   */
+  @include breakpoint-down(md) {
+    margin-top: px-to-rem(75px);
+    border-width: 10px;
+
+    &__inner {
+      padding-bottom: px-to-rem(25px);
+    }
+  }
 }
