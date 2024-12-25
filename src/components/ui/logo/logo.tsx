@@ -1,7 +1,7 @@
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
 
-import singleLogo from '@/assets/images/single-logo.svg';
+import singleLogo from '@/assets/images/single-logo.png';
 
 import './logo.scss';
 
