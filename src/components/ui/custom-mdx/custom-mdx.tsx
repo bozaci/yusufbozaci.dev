@@ -55,10 +55,10 @@ const CustomMDX: FC<MDXRemoteProps> = (props) => {
       return (
         <Image
           {...props}
-          width={0}
-          height={0}
+          width={601}
+          height={350}
           alt={props.alt || 'Content Inner Image'}
-          style={{ width: '100%', maxHeight: 300, objectFit: 'cover' }}
+          style={{ width: '100%', maxHeight: 350, objectFit: 'cover' }}
           className="br-lg"
           loading="lazy"
           unoptimized={props.src.includes('.gif')}
