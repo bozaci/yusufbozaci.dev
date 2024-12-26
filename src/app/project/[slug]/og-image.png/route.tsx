@@ -7,11 +7,7 @@ export async function GET(_: any, { params }: { params: any }) {
   const { slug } = params;
   const project = getProjects.find((p) => p.slug === slug);
 
-  if (!project)
-    return {
-      statusCode: 404,
-      body: 'OG Image not found',
-    };
+  if (!project) return new Response('OG Image not found');
 
   const { title, excerpt } = project;
 

@@ -7,11 +7,7 @@ export async function GET(_: any, { params }: { params: any }) {
   const { slug } = params;
   const content = await getContents().find((c) => c.slug === slug);
 
-  if (!content)
-    return {
-      statusCode: 404,
-      body: 'OG Image not found',
-    };
+  if (!content) return new Response('OG Image not found');
 
   const { title, excerpt } = content.metadata;
 
