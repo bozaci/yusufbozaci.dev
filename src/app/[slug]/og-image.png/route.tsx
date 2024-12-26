@@ -3,11 +3,11 @@ import { getContents } from '@/utils/mdx';
 
 import OpenGraphImage from '@/components/shared/og-image';
 
-export async function GET(_: any, { params }: { params: { slug: string } }) {
+export async function GET(_: any, { params }: { params: any }) {
   const { slug } = params;
   const content = await getContents().find((c) => c.slug === slug);
 
-  if (!content) return null;
+  if (!content) return undefined;
 
   const { title, excerpt } = content.metadata;
 

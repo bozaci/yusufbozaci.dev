@@ -3,11 +3,11 @@ import getProjects from '@/data/projects.json';
 
 import OpenGraphImage from '@/components/shared/og-image';
 
-export async function GET(_: any, { params }: { params: { slug: string } }) {
+export async function GET(_: any, { params }: { params: any }) {
   const { slug } = params;
   const project = getProjects.find((p) => p.slug === slug);
 
-  if (!project) return null;
+  if (!project) return undefined;
 
   const { title, excerpt } = project;
 
