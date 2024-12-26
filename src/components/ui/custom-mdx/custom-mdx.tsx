@@ -29,7 +29,7 @@ const CustomMDX: FC<MDXRemoteProps> = (props) => {
       return <h6 {...props} className="is-excluded-for-spacing" />;
     },
     p: (props: any) => {
-      return <p {...props} className="is-excluded-for-spacing" />;
+      return <p {...props} className="text-darker-gray is-excluded-for-spacing" />;
     },
     a: (props: any) => {
       return <LinkComp {...props} className="is-excluded-for-spacing" />;
@@ -47,7 +47,7 @@ const CustomMDX: FC<MDXRemoteProps> = (props) => {
     li: (props: any) => {
       return (
         <List.Item {...props}>
-          <div>{props.children}</div>
+          <div className="text-darker-gray">{props.children}</div>
         </List.Item>
       );
     },
