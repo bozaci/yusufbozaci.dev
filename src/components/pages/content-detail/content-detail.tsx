@@ -39,11 +39,29 @@ const ContentDetail = async ({ params }: { params: Promise<{ slug: string }> }) 
         <Hero.Line spacingSize="small" />
       </Hero>
 
-      <div className="content-detail">
+      <article className="content-detail">
         <div className="container spacing-md">
           <CustomMDX source={content.content} />
         </div>
-      </div>
+      </article>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            type: 'BlogPosting',
+            headline: content.metadata.title,
+            description: content.metadata.excerpt,
+            datePublished: content.metadata.publishedAt,
+            author: {
+              '@type': 'Person',
+              name: 'Yusuf Bozacı',
+            },
+            url: `${process.env.APP_BASE_URL}/${content.slug}`,
+          }),
+        }}
+      />
     </>
   );
 };
