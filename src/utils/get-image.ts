@@ -14,5 +14,5 @@ export const getImage = async (imageFolder: string) => {
 
   if (response.status !== 200 && response.status !== 204) return '/not-found-image.jpg';
 
-  return imageFolder;
+  return imageDir;
 };
