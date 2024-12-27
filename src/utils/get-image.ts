@@ -12,7 +12,7 @@ export const getImage = async (imageFolder: string) => {
     method: 'HEAD',
   });
 
-  if (response.status !== 200 && response.status !== 204) return '/not-found-image.jpg';
+  if (!response.ok) return '/not-found-image.jpg';
 
   return imageDir;
 };
