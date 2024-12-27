@@ -5,6 +5,7 @@ type Metadata = {
   title: string;
   excerpt: string;
   banner: string;
+  publishedAt: string;
 };
 
 function parseFrontmatter(fileContent: string) {
