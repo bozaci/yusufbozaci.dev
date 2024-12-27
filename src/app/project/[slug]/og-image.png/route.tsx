@@ -1,11 +1,13 @@
 import { ImageResponse } from 'next/og';
+import { sizes, getFonts } from '@/lib/og-image/constants';
 import getProjects from '@/data/projects.json';
 
 import OpenGraphImage from '@/components/shared/og-image';
 
 export async function GET(_: any, { params }: { params: any }) {
-  const { slug } = params;
+  const { slug } = await params;
   const project = getProjects.find((p) => p.slug === slug);
+  const fonts = (await getFonts()) as any;
 
   if (!project) return new Response('OG Image not found');
 
@@ -14,8 +16,8 @@ export async function GET(_: any, { params }: { params: any }) {
   return new ImageResponse(
     <OpenGraphImage title={title} description={excerpt} pathName={`project/${slug}`} />,
     {
-      width: 1200,
-      height: 630,
+      ...sizes,
+      fonts,
     },
   );
 }
