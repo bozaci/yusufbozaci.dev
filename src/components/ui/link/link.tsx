@@ -3,26 +3,16 @@
 import { FC } from 'react';
 import { LinkProps } from './link.type';
 import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
-import { useTransitionRouter } from 'next-view-transitions';
+import { Link } from 'next-view-transitions';
 
 import './link.scss';
 
 const LinkComp: FC<LinkProps> = ({ href, children }) => {
-  const router = useTransitionRouter();
-
   if (href.toString().startsWith('/')) {
     return (
-      <a
-        onClick={(e) => {
-          e.preventDefault();
-          router.push(href);
-        }}
-        href={href}
-        className="link"
-        aria-label={children?.toString()}
-      >
+      <Link href={href} className="link" aria-label={children?.toString()}>
         {children}
-      </a>
+      </Link>
     );
   } else {
     return (
